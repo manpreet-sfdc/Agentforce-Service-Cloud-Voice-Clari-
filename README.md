@@ -241,14 +241,4 @@ This solution delivers:
 
 The architecture is **enterprise-ready, modular, and future-proof**.
 
-```
 
----
-
-If you want next, I can:
-- Add **Mermaid diagrams** (`sequenceDiagram`, `flowchart`)
-- Create **repo folder structure**
-- Provide **Apex / Flow / MCP config samples**
-- Add **CI/CD & environment strategy**
-
-```
