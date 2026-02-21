@@ -84,3 +84,19 @@ MCP Rules:
 - Stateless execution window
 
 ```
+
+
+Post-Call Intelligence Phase (Clari)
+
+
+Context Inputs:
+- Final transcript
+- Call audio reference
+- Account & Opportunity metadata
+- Historical interaction summaries
+
+MCP Rules:
+- Long-context models allowed
+- Structured output enforcement
+- Historical trend analysis enabled
+
