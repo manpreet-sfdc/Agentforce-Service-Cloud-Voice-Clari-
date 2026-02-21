@@ -186,33 +186,33 @@ Data Protection
 
 Phase 2 – MCP Enablement
 
-Define prompt contracts
+--Define prompt contracts
 
-Configure context boundaries
+--Configure context boundaries
 
-Implement fallback and retry logic
+--Implement fallback and retry logic
 
-Enable observability logs
+--Enable observability logs
 
 Phase 3 – Intelligence Expansion
 
-Intent taxonomy tuning
+--Intent taxonomy tuning
 
-Sentiment & risk scoring
+--Sentiment & risk scoring
 
-Automated task creation
+--Automated task creation
 
-Manager dashboards
+--Manager dashboards
 
 🚀 Deployment Guidelines
 
-Agentforce → latency-sensitive AI only
+--Agentforce → latency-sensitive AI only
 
-Clari → heavy post-call analysis
+--Clari → heavy post-call analysis
 
-Single ownership of call summary fields
+--Single ownership of call summary fields
 
-Version all MCP contracts in Git
+--Version all MCP contracts in Git
 
 📈 Observability & Metrics
 
