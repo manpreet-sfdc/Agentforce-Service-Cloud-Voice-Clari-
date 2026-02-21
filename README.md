@@ -100,3 +100,180 @@ MCP Rules:
 - Structured output enforcement
 - Historical trend analysis enabled
 
+- MCP Prompt Contracts
+Call Summary Contract
+
+```
+{
+  "summary": "string",
+  "customer_intent": [
+    "Support",
+    "Renewal",
+    "Upsell",
+    "Escalation"
+  ],
+  "sentiment": "Positive | Neutral | Negative",
+  "key_topics": ["string"],
+  "next_steps": [
+    {
+      "action": "string",
+      "owner": "Agent | System",
+      "due_date": "ISO-8601"
+    }
+  ]
+}
+```
+
+
+Salesforce Data Model
+Core Objects
+
+| Object      | Purpose                          |
+| ----------- | -------------------------------- |
+| VoiceCall   | Call audio, transcript, metadata |
+| Case        | Support context                  |
+| Task        | Follow-up actions                |
+| Activity    | Timeline & engagement tracking   |
+| Opportunity | Revenue insights (optional)      |
+
+
+Field Mapping Example
+
+| AI Output       | Salesforce Field                   |
+| --------------- | ---------------------------------- |
+| Call Summary    | `VoiceCall.Call_Summary__c`        |
+| Customer Intent | `VoiceCall.Intent__c`              |
+| Next Steps      | `Task.Subject`, `Task.Description` |
+| Risk Signals    | `Opportunity.Risk_Score__c`        |
+
+
+Security & Compliance
+Data Protection
+
+--Audio stored in Service Cloud Voice provider or Salesforce
+
+--Transcript access controlled via permission sets
+
+--MCP enforces context-scoped data access
+
+--Compliance Controls
+
+--GDPR & SOC 2 aligned
+
+--PII masking at MCP layer
+
+--Full AI audit trail:
+
+  --Prompt version
+
+  --Model used
+
+  --Execution timestamp
+
+  --Output confidence
+
+  Implementation Strategy
+  
+ --Phase 1 – Foundation
+
+ --Enable Service Cloud Voice
+
+ --Configure Agentforce
+
+ --Enable VoiceCall object
+
+ --Integrate Clari with Salesforce
+
+Phase 2 – MCP Enablement
+
+Define prompt contracts
+
+Configure context boundaries
+
+Implement fallback and retry logic
+
+Enable observability logs
+
+Phase 3 – Intelligence Expansion
+
+Intent taxonomy tuning
+
+Sentiment & risk scoring
+
+Automated task creation
+
+Manager dashboards
+
+🚀 Deployment Guidelines
+
+Agentforce → latency-sensitive AI only
+
+Clari → heavy post-call analysis
+
+Single ownership of call summary fields
+
+Version all MCP contracts in Git
+
+📈 Observability & Metrics
+
+Recommended KPIs:
+
+--AI suggestion acceptance rate
+
+--Call summary accuracy score
+
+--Follow-up completion rate
+
+--Intent classification precision
+
+🔄 Extensibility
+
+--Plug in alternative Conversation Intelligence tools
+
+--Extend MCP to chat and email channels
+
+--Add Einstein Copilot for auto field updates
+
+🧪 Testing Strategy
+
+--Mock call transcripts for unit testing
+
+--Contract testing for MCP outputs
+
+--Agent UAT for AI suggestions
+
+--AI drift monitoring via MCP logs
+
+📚 References
+
+--Salesforce Service Cloud Voice Documentation
+
+--Agentforce Architecture Guides
+
+--Clari Conversation Intelligence APIs
+
+--Model Context Protocol (MCP) Specification
+
+🏁 Conclusion
+
+--This solution delivers:
+
+--Real-time agent productivity with Agentforce
+
+--Deep post-call intelligence with Clari
+
+--Scalable, governed AI using MCP
+
+The architecture is enterprise-ready, modular, and future-proof.
+
+```
+
+---
+
+If you want next, I can:
+- Add **Mermaid diagrams** (`sequenceDiagram`, `flowchart`)
+- Create **repo folder structure**
+- Provide **Apex / Flow / MCP config samples**
+- Add **CI/CD & environment strategy**
+
+```
